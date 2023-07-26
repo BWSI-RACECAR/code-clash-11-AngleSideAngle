@@ -51,6 +51,11 @@ class Solution:
                     max_count = count
                     count = 0
 
+            if count > max_count:
+                max_count = count
+
+            return max_count
+
 
 def main():
     array = input().split(" ")
