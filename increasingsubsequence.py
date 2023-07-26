@@ -42,7 +42,7 @@ class Solution:
             
             #TODO: Write code below to return an int with the solution to the prompt.
             max_count = 0
-            count = 0
+            count = 1
 
             for i in range(1, len(arr)):
                 if arr[i] > arr[i-1]:
