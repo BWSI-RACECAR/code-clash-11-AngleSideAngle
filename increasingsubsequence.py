@@ -41,7 +41,7 @@ class Solution:
             #return type: int
             
             #TODO: Write code below to return an int with the solution to the prompt.
-            arr.sort()
+
             max_count = 0
             count = 1
 
