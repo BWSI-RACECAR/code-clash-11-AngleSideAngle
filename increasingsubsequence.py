@@ -45,13 +45,16 @@ class Solution:
             max_count = 0
             count = 1
 
-            for i in range(1, len(arr)):
-                if arr[i] > arr[i-1]:
-                    count += 1
-                else:
-                    if count > max_count:
-                        max_count = count
-                    count = 1
+            for i in range(len(arr)):
+                num = arr[i]
+                for j in range(i, len(arr)):
+                    if arr[j] > num:
+                        num = arr[j]
+                        count += 1
+                    else:
+                        if count > max_count:
+                            max_count = count
+                        count = 1
 
             if count > max_count:
                 max_count = count
