@@ -42,24 +42,24 @@ class Solution:
             
             #TODO: Write code below to return an int with the solution to the prompt.
 
-            max_count = 0
-            count = 1
+            is_increasing = False
+            count = 0
+            prev = arr[0]
 
-            for i in range(len(arr)):
-                num = arr[i]
+            for i, num in enumerate(arr):
+                prev = num
                 for j in range(i, len(arr)):
-                    if arr[j] > num:
-                        num = arr[j]
-                        count += 1
+                    if arr[j] >= prev:
+                        is_increasing = True
                     else:
-                        if count > max_count:
-                            max_count = count
-                        count = 1
+                        if is_increasing:
+                            count += 1
+                        is_increasing = False
 
-            if count > max_count:
-                max_count = count
+            if count == 0:
+                count = 1
 
-            return max_count
+            return count
 
 
 def main():
